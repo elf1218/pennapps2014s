@@ -95,23 +95,13 @@ public class Create_Hunt extends Activity {
 		}
 		
 		if(connected){
-			DBCollection coll = db.getCollection("huntDB");
+			DBCollection coll = db.getCollection("HuntDB");
 			BasicDBObject locationObj = new BasicDBObject("location", locationOut);
 			BasicDBObject huntDBObj = new BasicDBObject("location", 
 					locationOut).append("huntID", 
 							id).append("hint", hintOut);
-			DBCursor cursor = coll.find(locationObj);
-			if(cursor.hasNext()){
-				coll.update(locationObj, huntDBObj);
-			}
-			else{
-				coll.insert(huntDBObj);
-			}
-			Toast.makeText(
-	                this, 
-	                "Location and hint pair added!", 
-	                Toast.LENGTH_LONG)
-	                .show();
+			coll.insert(huntDBObj);
+			coll.update(locationObj, huntDBObj);
 		}
 		
 	}
