@@ -8,5 +8,7 @@
     <string name="pwd">Password</string>
     <string name="username">User Name</string>
     <string name="submit">Submit!</string>
+    <string name="t1">test push</string>
+    <string name="t2">test pull</string>
 
 </resources>

@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText2"
         android:layout_below="@+id/editText2"
+        android:onClick="onLoginButtonClick"
         android:text="@string/submit" />
 
     <TextView
