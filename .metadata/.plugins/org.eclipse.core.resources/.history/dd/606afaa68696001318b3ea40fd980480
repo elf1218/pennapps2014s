@@ -3,17 +3,14 @@ package pennapps.scavangel;
 import java.net.UnknownHostException;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +18,6 @@ public class Create_Hunt extends Activity {
 	
 	String username;
 	int id;
-	DB db;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -54,7 +50,6 @@ public class Create_Hunt extends Activity {
 			DBCursor cursor = coll.find(query);
 			if(!cursor.hasNext()){
 				BasicDBObject newID = new BasicDBObject ("currentHuntID", 1);
-				coll.insert(newID);
 				id = 1;
 			}
 			else{
@@ -66,9 +61,5 @@ public class Create_Hunt extends Activity {
 			TextView idTextView = (TextView)findViewById(R.id.huntid);
 			idTextView.setText(Integer.toString(id));
 		}
-	}
-	
-	public void onCreateButtonPress(View v){
-		
 	}
 }

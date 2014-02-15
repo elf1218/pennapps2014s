@@ -115,13 +115,13 @@ public class MainActivity extends Activity {
 		startActivityForResult(i, 1);
 	}
 	
-/*	protected void onActivityResult(int requestCode, int resultCode, Intent intent){
+	protected void onActivityResult(int requestCode, int resultCode, Intent intent){
 		Toast.makeText(
                 this, 
                 "Thanks for using!", 
                 Toast.LENGTH_LONG)
                 .show();
-	}*/
+	}
 /*
 	public void onTestButtonOneClick(View v){
 		boolean auth = db.authenticate("pennapps", "pennapps".toCharArray());
