@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Scavangel</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login">Log In!</string>
+    <string name="pwd">Password</string>
+    <string name="username">User Name</string>
+    <string name="submit">Submit!</string>
+    <string name="t1">test push</string>
+    <string name="t2">test pull</string>
+    <string name="create">Create!</string>
+    <string name="participate">Participate!</string>
+
+</resources>

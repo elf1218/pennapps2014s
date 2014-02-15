@@ -12,6 +12,7 @@ import com.mongodb.MongoClientURI;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -83,6 +84,7 @@ public class MainActivity extends Activity {
 		                "Account created!", 
 		                Toast.LENGTH_LONG)
 		                .show();
+				goNext(userNameOut);
 			}
 			else{
 				DBObject info = cursor.next();
@@ -93,6 +95,7 @@ public class MainActivity extends Activity {
 			                "Login Success!", 
 			                Toast.LENGTH_LONG)
 			                .show();
+					goNext(userNameOut);
 				}
 				else{
 					Toast.makeText(
@@ -104,6 +107,20 @@ public class MainActivity extends Activity {
 			}
 
 		}
+	}
+	
+	public void goNext(String username){
+		Intent i = new Intent(this, Activity_Form.class);
+		i.putExtra("username", username);
+		startActivityForResult(i, 1);
+	}
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent intent){
+		Toast.makeText(
+                this, 
+                "Thanks for using!", 
+                Toast.LENGTH_LONG)
+                .show();
 	}
 /*
 	public void onTestButtonOneClick(View v){
