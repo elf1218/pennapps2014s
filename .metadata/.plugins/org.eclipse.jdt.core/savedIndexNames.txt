@@ -1,6 +1,0 @@
-INDEX VERSION 1.126+C:\Users\Kevin\Desktop\Notes\PennApps2014s\.metadata\.plugins\org.eclipse.jdt.core
-3304411641.index
-3339669380.index
-3407793199.index
-2090918199.index
-781102902.index
