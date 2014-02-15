@@ -97,10 +97,7 @@ public class Create_Hunt extends Activity {
 		if(connected){
 			DBCollection coll = db.getCollection("HuntDB");
 			BasicDBObject locationObj = new BasicDBObject("location", locationOut);
-			BasicDBObject huntDBObj = new BasicDBObject("location", 
-					locationOut).append("huntID", 
-							id).append("hint", hintOut);
-			coll.update(locationObj, huntDBObj);
+			BasicDBObject huntDBObj = new BasicDBObject("location", locationOut).append("huntID", id).append("hint", hintOut);
 		}
 		
 	}

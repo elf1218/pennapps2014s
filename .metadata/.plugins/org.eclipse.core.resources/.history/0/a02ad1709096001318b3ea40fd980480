@@ -100,7 +100,6 @@ public class Create_Hunt extends Activity {
 			BasicDBObject huntDBObj = new BasicDBObject("location", 
 					locationOut).append("huntID", 
 							id).append("hint", hintOut);
-			coll.update(locationObj, huntDBObj);
 		}
 		
 	}

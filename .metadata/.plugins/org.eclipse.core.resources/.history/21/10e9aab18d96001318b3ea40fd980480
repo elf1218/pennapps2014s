@@ -78,30 +78,6 @@ public class Create_Hunt extends Activity {
 		EditText hint = (EditText)findViewById(R.id.editText3);
 		String locationOut = location.getText().toString();
 		String hintOut = hint.getText().toString();
-		
-		String connectionstring="mongodb://pennapps:pennapps@ds027509.mongolab.com:27509/scav";
-		MongoClientURI uri  = new MongoClientURI(connectionstring);
-		boolean connected = true;
-		try {
-			MongoClient client = new MongoClient(uri);
-			db = client.getDB("scav");
-		} catch (UnknownHostException e) {
-			Toast.makeText(
-                this, 
-                "Couldn't access database - Check your internet connection!", 
-                Toast.LENGTH_LONG)
-                .show();
-			connected = false;
-		}
-		
-		if(connected){
-			DBCollection coll = db.getCollection("HuntDB");
-			BasicDBObject locationObj = new BasicDBObject("location", locationOut);
-			BasicDBObject huntDBObj = new BasicDBObject("location", 
-					locationOut).append("huntID", 
-							id).append("hint", hintOut);
-			coll.update(locationObj, huntDBObj);
-		}
-		
+
 	}
 }
