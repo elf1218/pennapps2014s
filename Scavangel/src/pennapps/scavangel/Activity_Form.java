@@ -26,4 +26,10 @@ public class Activity_Form extends MainActivity {
 		Intent i = new Intent(this, Join_Hunt.class);
 		startActivityForResult(i,  2);
 	}
+	
+	public void onEditButtonClick(View v){
+		Intent i = new Intent(this, Edit_Hunt.class);
+		i.putExtra("username", username);
+		startActivityForResult(i, 3);
+	}
 }

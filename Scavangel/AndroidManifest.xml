@@ -26,6 +26,8 @@
         <activity android:name="pennapps.scavangel.Create_Hunt"></activity>
         <activity android:name="pennapps.scavangel.Join_Hunt"></activity>
         <activity android:name="pennapps.scavangel.Enter_Location"></activity>
+        <activity android:name="pennapps.scavangel.Edit_Hunt"></activity>
+        <activity android:name="pennapps.scavangel.Edit_Selected_Hunt"></activity>
     </application>
 
 </manifest>
