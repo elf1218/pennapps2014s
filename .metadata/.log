@@ -9634,3 +9634,12 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.
 
 !ENTRY com.android.ide.eclipse.ddms 4 0 2014-02-15 16:05:59.825
 !MESSAGE DDMS files not found: /Users/carolynlim/Desktop/adt-bundle-mac-x86_64-20131030/eclipse/Eclipse.app/Contents/MacOS/C:\Users\Kevin\Desktop\Notes\CIS350\sdk/platform-tools/adb /Users/carolynlim/Desktop/adt-bundle-mac-x86_64-20131030/eclipse/Eclipse.app/Contents/MacOS/C:\Users\Kevin\Desktop\Notes\CIS350\sdk/tools/hprof-conv /Users/carolynlim/Desktop/adt-bundle-mac-x86_64-20131030/eclipse/Eclipse.app/Contents/MacOS/C:\Users\Kevin\Desktop\Notes\CIS350\sdk/tools/traceview 
+
+!ENTRY org.eclipse.ui 4 4 2014-02-15 18:42:54.375
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@548dacbb)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@71135d4f)}
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2014-02-15 18:42:55.034
+!MESSAGE join_hunt.xml: Couldn't resolve resource @string/huntsearch
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2014-02-15 18:42:55.041
+!MESSAGE join_hunt.xml: Couldn't resolve resource @string/joinhunt

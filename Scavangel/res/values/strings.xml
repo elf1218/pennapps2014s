@@ -15,5 +15,8 @@
     <string name="hunt">Hunt ID: </string>
     <string name="location">&quot;Location&quot;</string>
     <string name="hint">Hint</string>
+    <string name="joinhunt">Join!</string>
+    <string name="huntsearch">Search for a new hunt!</string>
+    <string name="locationanswer">Enter your answer here!</string>
 
 </resources>
