@@ -76,7 +76,7 @@ public class Create_Hunt extends Activity {
 	public void onCreateButtonPress(View v){
 		EditText location = (EditText)findViewById(R.id.editText2);
 		EditText hint = (EditText)findViewById(R.id.editText3);
-		String locationOut = location.getText().toString();
+		String locationOut = location.getText().toString().toLowerCase().trim();
 		String hintOut = hint.getText().toString();
 		
 		String connectionstring="mongodb://pennapps:pennapps@ds027509.mongolab.com:27509/scav";
@@ -112,7 +112,38 @@ public class Create_Hunt extends Activity {
 	                "Location and hint pair added!", 
 	                Toast.LENGTH_LONG)
 	                .show();
+			location.setText("");
+			hint.setText("");
 		}
 		
+	}
+	public void onInitButtonPress(View v){
+		EditText initHint = (EditText)findViewById(R.id.editText1);
+		String initHintOut = initHint.getText().toString().toLowerCase().trim();
+		String connectionstring="mongodb://pennapps:pennapps@ds027509.mongolab.com:27509/scav";
+		MongoClientURI uri  = new MongoClientURI(connectionstring);
+		boolean connected = true;
+		try {
+			MongoClient client = new MongoClient(uri);
+			db = client.getDB("scav");
+		} catch (UnknownHostException e) {
+			Toast.makeText(
+                this, 
+                "Couldn't access database - Check your internet connection!", 
+                Toast.LENGTH_LONG)
+                .show();
+			connected = false;
+		}
+		if(connected){
+			DBCollection coll = db.getCollection("huntDB");
+			BasicDBObject hintObj = new BasicDBObject("initHint", initHintOut);
+			coll.save(hintObj.append("initHintID", id));
+			Toast.makeText(
+	                this, 
+	                "Initial hint added!", 
+	                Toast.LENGTH_LONG)
+	                .show();
+			initHint.setText("");
+		}
 	}
 }

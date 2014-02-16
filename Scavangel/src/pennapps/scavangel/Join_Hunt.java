@@ -10,6 +10,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -47,16 +48,15 @@ public class Join_Hunt extends Activity {
 			if(!cursor.hasNext()){
 				Toast.makeText(
 		                this, 
-		                "Event #" + huntID + " does not exist!", 
+		                "Event #" + huntIDOut + " does not exist!", 
 		                Toast.LENGTH_LONG)
 		                .show();
 			}
 			else{
-				//TODO transition to next
-			}
-			
+				Intent i = new Intent(this, Enter_Location.class);
+				i.putExtra("id", huntIDOut);
+				startActivityForResult(i, 1);
+			}	
 		}
-		
-
 	}
 }

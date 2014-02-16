@@ -2,7 +2,6 @@ package pennapps.scavangel;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 
 public class Activity_Form extends MainActivity {
