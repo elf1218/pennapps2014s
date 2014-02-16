@@ -3,6 +3,7 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgc"
     android:orientation="vertical" >
 
     <EditText
@@ -20,9 +21,9 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText1"
         android:layout_below="@+id/editText1"
-        android:text="@string/joinhunt"
-        android:onClick="onJoinButtonClick" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onJoinButtonClick"
+        android:text="@string/joinhunt" />
 
 </RelativeLayout>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/bgc" >
 
     <TextView
         android:id="@+id/textView1"
@@ -10,6 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:ems="10"
+        android:textColor="#FFF"
         android:text="@string/hunt"
         android:textSize="24sp" >
 
@@ -22,17 +24,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textView1"
+		android:textColor="#FFF"
         android:ems="10"
         android:textSize="24sp" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true"
-        android:onClick="onCreateButtonPress"
-        android:text="@string/createhuntsubmit" />
 
     <EditText
         android:id="@+id/editText3"
@@ -48,31 +42,37 @@
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/textView1"
-        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
         android:ems="10"
         android:hint="@string/location"
         android:inputType="text" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:onClick="onCreateButtonPress"
+        android:text="@string/createhuntsubmit" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
+        android:layout_alignLeft="@+id/editText3"
         android:layout_below="@+id/button1"
         android:ems="10"
-        android:hint="@string/inithint" >
-
-        <requestFocus />
-    </EditText>
+        android:hint="@string/inithint" />
 
     <Button
         android:id="@+id/Button01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
         android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
         android:onClick="onInitButtonPress"
         android:text="@string/inithintsubmit" />
 
