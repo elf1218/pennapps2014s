@@ -93,6 +93,7 @@ public class Enter_Location extends Activity {
 						hintTextView.setText(locationHint);
 					}
 				}
+				guess.setText("");
 			}
 		}
 
