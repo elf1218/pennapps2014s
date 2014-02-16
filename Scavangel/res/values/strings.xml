@@ -16,5 +16,7 @@
     <string name="location">&quot;Location&quot;</string>
     <string name="hint">Hint</string>
     <string name="createhuntsubmit">Submit New Location</string>
+    <string name="huntsearch">Input Hunt#</string>
+    <string name="joinhunt">Join Hunt!</string>
 
 </resources>

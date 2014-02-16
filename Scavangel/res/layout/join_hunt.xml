@@ -14,7 +14,7 @@
         android:layout_marginTop="114dp"
         android:ems="10"
         android:hint="@string/huntsearch"
-        android:inputType="text" />
+        android:inputType="number|text" />
 
     <Button
         android:id="@+id/button1"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/editText1"
         android:layout_below="@+id/editText1"
-        android:onClick="onJoinButtonClick"
-        android:text="@string/joinhunt" />
+        android:text="@string/joinhunt"
+        android:onClick="onJoinButtonClick" />
 
 </RelativeLayout>

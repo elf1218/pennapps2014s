@@ -24,6 +24,7 @@ public class Activity_Form extends MainActivity {
 	}
 	
 	public void onParticipateButtonClick(View v){
-		
+		Intent i = new Intent(this, Join_Hunt.class);
+		startActivityForResult(i,  2);
 	}
 }
